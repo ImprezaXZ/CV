@@ -37,9 +37,9 @@
     a:hover { color: var(--link-hover); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .work-timeline { position: relative; padding-left: 20px; padding-top: 1.4em; }
-    .work-timeline::before { content: ''; position: absolute; left: 9px; top: 1.4em; bottom: 0; width: 2px; background: var(--secondary); }
+    .work-timeline::before { content: ''; position: absolute; left: 9px; top: 40px; bottom: 0; width: 2px; background: var(--secondary); }
     .timeline-entry { position: relative; margin-bottom: 12px; padding-left: 24px; }
-    .timeline-entry::before { content: ''; position: absolute; left: 1px; top: calc(50% - 4px); width: 8px; height: 8px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
+    .timeline-entry::before { content: ''; position: absolute; left: 0.7em; top: calc(6px - 4px); width: 12px; height: 12px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
     .work-grid-content { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     @media (max-width: 600px) { header h1 { font-size:1.4rem; } .two-col, .work-grid-content { grid-template-columns:1fr; } }
   </style>
@@ -47,7 +47,6 @@
 </head>
 <body>
   <div id="resume">
-    <button class="btn-pdf" id="download-pdf">Download PDF</button>
     <header>
       <h1>Denys Tymofiienko</h1>
 
@@ -118,7 +117,7 @@ automation</li>
     <section class="work-timeline">
       <h2>Work Experience</h2>
       <div class="timeline-entry">
-        <h3>MNSTR.TECH — System Administrator/Atlassian Expert (Feb 2025–Apr 2025)</h3>
+        <h3 style="color: var(--accent)">MNSTR.TECH — </h3><h3>System Administrator/Atlassian Expert </h3><h3 style="color: var(--accent)">(Feb 2025–Apr 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
@@ -140,7 +139,7 @@ automation</li>
         </div>
       </div>
       <div class="timeline-entry">
-        <h3>NetGame — System Administrator (Mar 2024–Feb 2025)</h3>
+        <h3 style="color: var(--accent)">NetGame — </h3><h3>System Administrator </h3><h3 style="color: var(--accent)">(Mar 2024–Feb 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
@@ -165,7 +164,7 @@ automation</li>
         </div>
       </div>
       <div class="timeline-entry">
-        <h3>Funkeys — Service Manager &amp; SysAdmin (Sep 2020–2023)</h3>
+        <h3 style="color: var(--accent)">Funkeys — </h3><h3>Service Manager &amp; SysAdmin </h3><h3 style="color: var(--accent)">(Sep 2020–2023)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
