@@ -39,9 +39,28 @@
     a:hover { color: var(--link-hover); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .work-timeline { position: relative; padding-left: 20px; padding-top: 1.4em; }
-    .work-timeline::before { content: ''; position: absolute; left: 9px; top: 40px; bottom: 0; width: 2px; background: var(--secondary); }
-    .timeline-entry { position: relative; margin-bottom: 12px; padding-left: 24px; }
-    .timeline-entry::before { content: ''; position: absolute; left: 0.7em; top: calc(6px - 4px); width: 12px; height: 12px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
+    .timeline-entry h3 {
+  margin: 0;               /* Сбрасываем внешние отступы */
+  padding-left: 24px;      /* Отступ для всех строк */
+  text-indent: -24px;      /* Сдвигаем первую строку влево на размер отступа */
+}
+.work-timeline::before { content: ''; position: absolute; left: 9px; top: 40px; bottom: 0; width: 2px; background: var(--secondary); }
+    .timeline-entry {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 24px;      /* То же, что и у h3 */
+}
+    .timeline-entry::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: calc(50% - 4px);
+  width: 8px;
+  height: 8px;
+  border: 2px solid var(--secondary);
+  background: var(--bg);
+  border-radius: 50%;
+}
     .work-grid-content { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     @media (max-width: 600px) { header h1 { font-size:1.4rem; } .two-col, .work-grid-content { grid-template-columns:1fr; } }
   </style>
