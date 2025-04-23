@@ -30,7 +30,7 @@
     section.in-view { opacity: 1; transform: translateY(0); }
     section:nth-child(even) { background: rgba(212,175,55,0.05); padding: 8px; border-radius: 4px; }
     section h2 { font-weight: 700; font-size: 1rem; border-bottom: 1px solid var(--accent); display: inline-block; margin-bottom: 8px; padding-bottom: 2px; color: var(--accent); }
-    h3 { font-weight: 700; font-size: 0.9rem; margin-top: 12px; margin-bottom: 4px; color: var(--secondary); }
+    h3 { font-weight: 700; font-size: 0.9rem; margin-top: 12px; margin-bottom: 4px; color: var(--accent); }
     h4 { font-weight: 700; font-size: 0.85rem; margin-top: 8px; margin-bottom: 4px; color: var(--text-primary); }
     ul, ol { padding-left: 16px; margin-bottom: 8px; }
     li { margin-bottom: 4px; color: var(--text-secondary); }
@@ -38,10 +38,10 @@
     a:hover { color: var(--link-hover); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .work-timeline { position: relative; padding-left: 20px; padding-top: 1.5rem; margin-bottom: 16px; }
-    .work-timeline::before { content: ''; position: absolute; left: 9px; top: 1.5rem; bottom: 0; width: 2px; background: var(--secondary); }
+    .work-timeline::before { content: ''; position: absolute; left: 9px; top: 50px; bottom: 0; width: 2px; background: var(--secondary); }
     .timeline-entry { position: relative; margin-bottom: 16px; padding-left: 20px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
     .timeline-entry.in-view { opacity: 1; transform: translateY(0); }
-    .timeline-entry::before { content: ''; position: absolute; left: 5px; top: calc(50% - 4px); width: 8px; height: 8px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
+    .timeline-entry::before { content: ''; position: absolute; left: 5px; top: calc(7px - 4px); width: 8px; height: 8px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
     .work-grid-content { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     @media (max-width: 600px) { header h1 { font-size: 1.5rem; } section h2 { font-size: 0.9rem; } .two-col, .work-grid-content { grid-template-columns: 1fr; } }
     @media print { .btn-pdf { display: none; } section, .timeline-entry { opacity: 1 !important; transform: none !important; } section:nth-child(even) { background: transparent; padding: 0; } }
@@ -52,6 +52,7 @@
     <button class="btn-pdf" id="download-pdf">Download PDF</button>
     <header>
       <h1>Denys Tymofiienko</h1>
+
 <p>Kyiv, Ukraine</p>
       <p class="subtitle">Jira Administrator | Atlassian Consultant | System & Process Automation Specialist</p>
     </header>
@@ -65,10 +66,23 @@
     </section>
     <section>
       <h2>Summary</h2>
-      <p>Experienced Jira Administrator with strong background in Atlassian ecosystem, system administration, and process automation. Proven track record in configuring Jira Software, Jira Service Management, and Confluence for tech and non-tech departments (120–600 employees). Skilled in optimizing workflows, integrations (Slack, Git, Zapier), and cross-functional onboarding/offboarding processes. Looking for an in-house or consulting role to scale Atlassian tools and streamline business operations.</p>
+      <p>Experienced Jira Administrator with 3+ years in the Atlassian ecosystem and IT operations. I specialize in automating routine tasks, integrating systems like Slack, Git, and HR tools, and helping businesses scale efficiently through structured process setup. Built Jira Service Desks for teams of 600+ and automated onboarding/offboarding for cross-functional departments. Looking for a role where I can drive productivity and system reliability as an in-house admin or Atlassian consultant.
+</p>
+<h2> Atlassian Expertise</h2>
+<li>Jira Software / Jira Service Management: configuration, customization,
+automation</li>
+<li>Confluence: space structuring, knowledge base creation</li>
+<li>Scripting & Automation: ScriptRunner, Automation rules, Zapier</li>
+<li>Integrations: Slack, Git, PeopleForce, EasyBI, HRMS tools, HiBob</li>
+<li>Service Desks: creation from scratch for SysAdmin, HR, Legal, Finance</li>
+<li>Reporting: custom dashboards, EasyBI reports, metrics for SLA and team load</li>
+<li>User/Permission management, Access controls</li>
+<li>API-based process automation (incl. approvals)</li>
+<li>Admin for 40+ active projects in Jira</li>
+<li>Avaibility to work with any custom/marketplace plugin</li>
     </section>
     <section>
-      <h2>Expertise &amp; Skills</h2>
+      <h2>Tech Skills</h2>
       <div class="two-col">
         <div>
           <h3>Platforms &amp; Operating Systems</h3>
@@ -110,13 +124,9 @@
             <h4>Key Responsibilities</h4>
             <ul>
               <li>Set up and administered Jira Service Management projects for SysAdmin, Legal, and Finance departments (10+ projects)</li>
-              <li>Confluence: space structuring, knowledge base creation</li>
-              <li>Scripting &amp; Automation: ScriptRunner, Automation rules, Zapier</li>
-              <li>Integrations: Slack, Git, PeopleForce, EasyBI, HRMS tools</li>
-              <li>Service Desks: creation from scratch for SysAdmin, HR, Legal, Finance</li>
-              <li>Reporting: custom dashboards, EasyBI reports, metrics for SLA and team load</li>
-              <li>User/Permission management, Access controls</li>
-              <li>API-based process automation (incl. approvals)</li>
+              <li>Built dashboards in EasyBI to track key metrics</li>
+              <li>Customized workflows with ScriptRunner & Automation rules, integrated external systems (Slack, HR tools, Git)</li>
+              <li>Controlled user permissions, service access, hardware/software procurement flows</li>
             </ul>
           </div>
           <div>
@@ -179,14 +189,18 @@
       </ul>
     </section>
     <section>
-      <h2>Contact &amp; Soft Skills</h2>
+      <h2>Contacts</h2>
+<p style="text-align:center; margin-top:8px; font-weight:700; color:var(--text-primary);">Soft Skills: Communication | Curiosity | Resilience | Fast learner | Proactive</p>
       <ul>
-        <li>Phone: <a href="tel:+380991781380">+380 (99) 178-13-80</a></li>
         <li>Email: <a href="mailto:imprezaxluv@gmail.com">imprezaxluv@gmail.com</a></li>
         <li>Telegram: <a href="https://t.me/nohesitage">@nohesitage</a></li>
         <li>GitHub: <a href="https://github.com/ImprezaXZ">ImprezaXZ</a></li>
+<li>LinkedIn: <a href="linkedin.com/in/denystymofiienko/">Denys Tymofiienko</a></li>
       </ul>
-      <p style="text-align:center; margin-top:8px; font-weight:700; color:var(--text-primary);">Soft Skills: Communication | Curiosity | Resilience | Fast learner | Proactive</p>
+    </section>
+    <section>
+      <h2>Softskills</h2>
+<p style="text-align:center; margin-top:8px; font-weight:700; color:var(--text-primary);">Soft Skills: Communication | Curiosity | Resilience | Fast learner | Proactive</p>
     </section>
   </div>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
