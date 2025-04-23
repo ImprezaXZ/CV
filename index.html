@@ -9,28 +9,42 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
-    :root { --accent: #6A0DAD; --bg: #fff; --bg-alt: #f9f9f9; --text-primary: #1a1a1a; --text-secondary: #555; }
+    :root {
+      --accent: #6A0DAD;           /* primary purple */
+      --secondary: #D4AF37;        /* mustard gold */
+      --link-hover: #0D8A7D;       /* dark teal */
+      --text-primary: #2F2F2F;     /* graphite */
+      --text-secondary: #555;
+      --bg: #fff;
+      --bg-alt: #f9f9f9;
+      --base-font: 13px;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Montserrat', sans-serif; color: var(--text-primary); background: var(--bg-alt); line-height: 1.5; padding: 20px; }
-    #resume { max-width: 800px; margin: 0 auto; background: var(--bg); padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
-    .btn-pdf { display: inline-block; margin-bottom: 24px; background: var(--accent); color: #fff; border: none; padding: 8px 16px; font-size: 0.875rem; border-radius: 4px; cursor: pointer; transition: opacity 0.2s; }
-    .btn-pdf:hover { opacity: 0.8; }
-    header { text-align: center; margin-bottom: 32px; }
-    header h1 { font-weight: 700; font-size: 2.5rem; color: var(--accent); }
-    header p.subtitle { font-weight: 300; color: var(--text-secondary); margin-top: 8px; }
-    section { margin-bottom: 32px; }
-    section h2 { font-weight: 700; font-size: 1.25rem; border-bottom: 2px solid var(--accent); display: inline-block; margin-bottom: 16px; padding-bottom: 4px; color: var(--accent); }
-    h3 { font-weight: 700; font-size: 1rem; margin-top: 16px; margin-bottom: 8px; color: var(--text-primary); }
-    h4 { font-weight: 700; font-size: 0.95rem; margin-top: 12px; margin-bottom: 8px; color: var(--text-primary); }
-    ul, ol { padding-left: 20px; margin-bottom: 16px; }
-    li { margin-bottom: 8px; color: var(--text-secondary); }
-    a { color: var(--text-primary); text-decoration: none; border-bottom: 1px dotted var(--accent); transition: color 0.2s; }
-    a:hover { color: var(--accent); }
-    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .two-col ul { margin: 0; }
-    .work-grid { margin-bottom: 32px; }
-    .work-grid-content { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    @media (max-width: 600px) { header h1 { font-size: 2rem; } section h2 { font-size: 1.125rem; } .two-col, .work-grid-content { grid-template-columns: 1fr; } }
+    body { font-family: 'Montserrat', sans-serif; font-size: var(--base-font); color: var(--text-primary); background: var(--bg-alt); line-height: 1.3; padding: 10px; }
+    #resume { max-width: 800px; margin: auto; background: var(--bg); padding: 20px; border-radius: 4px; }
+    .btn-pdf { margin-bottom: 16px; background: var(--accent); color: #fff; border: none; padding: 6px 12px; font-size: 0.75rem; border-radius: 3px; cursor: pointer; }
+    header { text-align: center; margin-bottom: 16px; }
+    header h1 { font-weight: 700; font-size: 1.8rem; color: var(--accent); margin-bottom: 4px; }
+    header p.subtitle { font-weight: 300; color: var(--text-secondary); font-size: 0.85rem; }
+    section { margin-bottom: 16px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    section.in-view { opacity: 1; transform: translateY(0); }
+    section:nth-child(even) { background: rgba(212,175,55,0.05); padding: 8px; border-radius: 4px; }
+    section h2 { font-weight: 700; font-size: 1rem; border-bottom: 1px solid var(--accent); display: inline-block; margin-bottom: 8px; padding-bottom: 2px; color: var(--accent); }
+    h3 { font-weight: 700; font-size: 0.9rem; margin-top: 12px; margin-bottom: 4px; color: var(--secondary); }
+    h4 { font-weight: 700; font-size: 0.85rem; margin-top: 8px; margin-bottom: 4px; color: var(--text-primary); }
+    ul, ol { padding-left: 16px; margin-bottom: 8px; }
+    li { margin-bottom: 4px; color: var(--text-secondary); }
+    a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); transition: color 0.2s; }
+    a:hover { color: var(--link-hover); }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+    .work-timeline { position: relative; padding-left: 20px; margin-bottom: 16px; }
+    .work-timeline::before { content: ''; position: absolute; left: 9px; top: calc(1em + 8px); bottom: 0; width: 2px; background: var(--secondary); }
+    .timeline-entry { position: relative; margin-bottom: 16px; padding-left: 20px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .timeline-entry.in-view { opacity: 1; transform: translateY(0); }
+    .timeline-entry::before { content: ''; position: absolute; left: 5px; top: calc(0.4em); width: 8px; height: 8px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
+    .work-grid-content { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 600px) { header h1 { font-size: 1.5rem; } section h2 { font-size: 0.9rem; } .two-col, .work-grid-content { grid-template-columns: 1fr; } }
+    @media print { .btn-pdf { display: none; } section, .timeline-entry { opacity: 1 !important; transform: none !important; } section:nth-child(even) { background: transparent; padding: 0; } }
   </style>
 </head>
 <body>
@@ -38,7 +52,7 @@
     <button class="btn-pdf" id="download-pdf">Download PDF</button>
     <header>
       <h1>Denys Tymofiienko</h1>
-      <p class="subtitle">Kyiv, Ukraine<br>Jira Administrator | Atlassian Consultant | System &amp; Process Automation Specialist</p>
+      <p class="subtitle">Kyiv, Ukraine | Jira Administrator | Atlassian Consultant | System & Process Automation Specialist</p>
     </header>
     <section>
       <h2>Project</h2>
@@ -66,29 +80,29 @@
           <ul>
             <li>Protocols &amp; Services: DHCP, DNS, VPN, TLS/SSL, SSH, TCP/IP, LAN/WLAN</li>
             <li>Servers: LAMP stack, mail domains (Google Admin), domain &amp; DNS records (NameCheap, DigitalOcean)</li>
-            <li>High availability: UPS‑backed hardware, blackout‑resilient networking</li>
+            <li>High availability: UPS-backed hardware, blackout-resilient networking</li>
           </ul>
         </div>
         <div>
           <h3>Virtualization &amp; Automation</h3>
           <ul>
-            <li>Hyper‑V, WSL, Docker</li>
-            <li>Ansible (self‑taught), Zapier (Slack &amp; billing integrations)</li>
+            <li>Hyper-V, WSL, Docker</li>
+            <li>Ansible (self-taught), Zapier (Slack &amp; billing integrations)</li>
             <li>Shell/Bash &amp; Python scripting; PHP (WordPress freelance)</li>
           </ul>
           <h3>Hardware &amp; Tools</h3>
           <ul>
             <li>Machine maintenance &amp; assembly (600+ endpoints)</li>
-            <li>ACS systems (FortiNet, U‑Prox), workspace setup</li>
+            <li>ACS systems (FortiNet, U-Prox), workspace setup</li>
             <li>Version control &amp; CI: GitHub (Jira integration, branching)</li>
             <li>Embedded &amp; IoT: Arduino/C++ firmware development</li>
           </ul>
         </div>
       </div>
     </section>
-    <section>
+    <section class="work-timeline">
       <h2>Work Experience</h2>
-      <div class="work-grid">
+      <div class="timeline-entry">
         <h3>MNSTR.TECH — System Administrator/Atlassian Expert (Feb 2025–Apr 2025)</h3>
         <div class="work-grid-content">
           <div>
@@ -114,7 +128,7 @@
           </div>
         </div>
       </div>
-      <div class="work-grid">
+      <div class="timeline-entry">
         <h3>NetGame — System Administrator (Mar 2024–Feb 2025)</h3>
         <div class="work-grid-content">
           <div>
@@ -122,8 +136,8 @@
             <ul>
               <li>Provide technical user support and HelpDesk engineering</li>
               <li>Maintain 600+ endpoints across macOS, Ubuntu, Mint, Fedora and Windows</li>
-              <li>Manage network infrastructure: workspace setup, VPN (office &amp; remote), and ACS systems (FortiNet, U‑Prox)</li>
-              <li>Administer Active Directory on Windows Server for Wi‑Fi, Jira and VPN access provisioning</li>
+              <li>Manage network infrastructure: workspace setup, VPN (office &amp; remote), and ACS systems (FortiNet, U-Prox)</li>
+              <li>Administer Active Directory on Windows Server for Wi-Fi, Jira and VPN access provisioning</li>
               <li>Configure and maintain Jira across 10 projects, including Service Desk setup for SysAdmin &amp; Admin departments</li>
               <li>Operate Google Workspace, Slack &amp; email domains via Google Admin Panel</li>
               <li>Oversee hardware/software procurement workflows and access controls</li>
@@ -133,14 +147,14 @@
             <h4>Achievements</h4>
             <ul>
               <li>Designed and launched a Jira Service Desk from scratch, serving 600+ employees</li>
-              <li>Built battery‑backed charging stations to ensure network uptime during blackouts</li>
+              <li>Built battery-backed charging stations to ensure network uptime during blackouts</li>
               <li>Integrated Jira with PeopleForce to automate onboarding/offboarding processes</li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="work-grid">
-        <h3>Funkeys — Service Manager, Tech Support &amp; SysAdmin (Sep 2020–2023)</h3>
+      <div class="timeline-entry">
+        <h3>Funkeys — Service Manager &amp; SysAdmin (Sep 2020–2023)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
@@ -152,9 +166,7 @@
               <li>Setting up workspaces and administrating network connection in office</li>
             </ul>
           </div>
-          <div>
-            <!-- No achievements listed for Funkeys -->
-          </div>
+          <div></div>
         </div>
       </div>
     </section>
@@ -173,28 +185,24 @@
         <li>Telegram: <a href="https://t.me/nohesitage">@nohesitage</a></li>
         <li>GitHub: <a href="https://github.com/ImprezaXZ">ImprezaXZ</a></li>
       </ul>
-      <p style="text-align:center; margin-top:16px; font-weight:700; color:var(--text-primary);">
-        Soft Skills: Communication | Curiosity | Resilience | Fast learner | Proactive
-      </p>
+      <p style="text-align:center; margin-top:8px; font-weight:700; color:var(--text-primary);">Soft Skills: Communication | Curiosity | Resilience | Fast learner | Proactive</p>
     </section>
   </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js" defer></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   <script defer>
-    document.addEventListener('DOMContentLoaded', function() {
-      var btn = document.getElementById('download-pdf');
-      var resume = document.getElementById('resume');
-      if (btn && resume) {
-        btn.addEventListener('click', function() {
-          if (typeof html2pdf === 'undefined') {
-            alert('PDF library failed to load.');
-            return;
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in-view');
+            observer.unobserve(entry.target);
           }
-          html2pdf()
-            .set({ margin: 0.5, filename: 'Denys Tymoienko Jira Administrator | Atlassian Consultant | System & Process Automation Specialist.pdf', html2canvas: { scale: 2 } })
-            .from(resume)
-            .save();
         });
-      }
+      }, { threshold: 0.1 });
+      document.querySelectorAll('section, .timeline-entry').forEach(el => observer.observe(el));
+      document.getElementById('download-pdf').addEventListener('click', () => {
+        html2pdf().set({ margin:0.2, filename:'Denys Tymoienko_ Jira Administrator | Atlassian Consultant | System & Process Automation Specialist.pdf', html2canvas:{scale:2} }).from(document.getElementById('resume')).save();
+      });
     });
   </script>
 </body>
