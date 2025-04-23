@@ -29,9 +29,7 @@
     section { margin-bottom: 12px; page-break-inside: avoid; break-inside: avoid; }
     section h2 { font-weight: 700; font-size: 1rem; border-bottom: 1px solid var(--accent); display: inline-block; margin-bottom: 6px; padding-bottom: 2px; color: var(--accent); }
     section:nth-of-type(even) { background: rgba(212,175,55,0.05); padding: 6px; border-radius: 4px; }
-    h3 { margin: 0; font-size: 0.9rem; }
-    .company { color: var(--accent); font-weight: 700; }
-    .position { color: var(--secondary); font-weight: 700; }
+    h3 { font-weight: 700; font-size: 0.85rem; margin-top: 8px; margin-bottom: 4px; color: var(--secondary); }
     h4 { font-weight: 700; font-size: 0.8rem; margin-top: 6px; margin-bottom: 4px; color: var(--text-primary); }
     ul, ol { padding-left: 16px; margin-bottom: 8px; }
     li { margin-bottom: 3px; color: var(--text-secondary); }
@@ -39,28 +37,9 @@
     a:hover { color: var(--link-hover); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     .work-timeline { position: relative; padding-left: 20px; padding-top: 1.4em; }
-    .timeline-entry h3 {
-  margin: 0;               /* Сбрасываем внешние отступы */
-  padding-left: 24px;      /* Отступ для всех строк */
-  text-indent: -24px;      /* Сдвигаем первую строку влево на размер отступа */
-}
-.work-timeline::before { content: ''; position: absolute; left: 9px; top: 40px; bottom: 0; width: 2px; background: var(--secondary); }
-    .timeline-entry {
-  position: relative;
-  margin-bottom: 12px;
-  padding-left: 24px;      /* То же, что и у h3 */
-}
-    .timeline-entry::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: calc(50% - 4px);
-  width: 8px;
-  height: 8px;
-  border: 2px solid var(--secondary);
-  background: var(--bg);
-  border-radius: 50%;
-}
+    .work-timeline::before { content: ''; position: absolute; left: 9px; top: 40px; bottom: 0; width: 2px; background: var(--secondary); }
+    .timeline-entry { position: relative; margin-bottom: 12px; padding-left: 24px; }
+    .timeline-entry::before { content: ''; position: absolute; left: 0.7em; top: calc(6px - 4px); width: 12px; height: 12px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
     .work-grid-content { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     @media (max-width: 600px) { header h1 { font-size:1.4rem; } .two-col, .work-grid-content { grid-template-columns:1fr; } }
   </style>
@@ -138,8 +117,7 @@ automation</li>
     <section class="work-timeline">
       <h2>Work Experience</h2>
       <div class="timeline-entry">
-        <h3><span class="company">MNSTR.TECH</span> <span class="position">System Administrator/Atlassian Expert</span> <span class="company">(Feb 2025–Apr 2025)</span></h3>
-        <div class="work-grid-content">
+        <h3>MNSTR.TECH — System Administrator/Atlassian Expert (Feb 2025–Apr 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
@@ -161,7 +139,7 @@ automation</li>
         </div>
       </div>
       <div class="timeline-entry">
-        <h3><span class="company">NetGame</span> <span class="position">System Administrator</span> <span class="company">(Mar 2024–Feb 2025)</span></h3>
+        <h3">NetGame — System Administrator (Mar 2024–Feb 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
@@ -186,7 +164,7 @@ automation</li>
         </div>
       </div>
       <div class="timeline-entry">
-        <h3><span class="company">Funkeys</span> <span class="position">Service Manager &amp; SysAdmin</span> <span class="company">(Sep 2020–2023)</span></h3>
+        <h3>Funkeys — Service Manager &amp; SysAdmin (Sep 2020–2023)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
