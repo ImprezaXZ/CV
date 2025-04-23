@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --accent: #6A0DAD;           /* primary purple */
-      --secondary: #D4AF37;        /* mustard gold */
-      --link-hover: #0D8A7D;       /* dark teal */
-      --text-primary: #2F2F2F;     /* graphite */
+      --accent: #6A0DAD;
+      --secondary: #D4AF37;
+      --link-hover: #0D8A7D;
+      --text-primary: #2F2F2F;
       --text-secondary: #555;
       --bg: #fff;
       --bg-alt: #f9f9f9;
@@ -37,11 +37,11 @@
     a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); transition: color 0.2s; }
     a:hover { color: var(--link-hover); }
     .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
-    .work-timeline { position: relative; padding-left: 20px; margin-bottom: 16px; }
-    .work-timeline::before { content: ''; position: absolute; left: 9px; top: calc(1em + 8px); bottom: 0; width: 2px; background: var(--secondary); }
+    .work-timeline { position: relative; padding-left: 20px; padding-top: 1.5rem; margin-bottom: 16px; }
+    .work-timeline::before { content: ''; position: absolute; left: 9px; top: 1.5rem; bottom: 0; width: 2px; background: var(--secondary); }
     .timeline-entry { position: relative; margin-bottom: 16px; padding-left: 20px; opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
     .timeline-entry.in-view { opacity: 1; transform: translateY(0); }
-    .timeline-entry::before { content: ''; position: absolute; left: 5px; top: calc(0.4em); width: 8px; height: 8px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
+    .timeline-entry::before { content: ''; position: absolute; left: 5px; top: calc(50% - 4px); width: 8px; height: 8px; border: 2px solid var(--secondary); background: var(--bg); border-radius: 50%; }
     .work-grid-content { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
     @media (max-width: 600px) { header h1 { font-size: 1.5rem; } section h2 { font-size: 0.9rem; } .two-col, .work-grid-content { grid-template-columns: 1fr; } }
     @media print { .btn-pdf { display: none; } section, .timeline-entry { opacity: 1 !important; transform: none !important; } section:nth-child(even) { background: transparent; padding: 0; } }
@@ -52,7 +52,8 @@
     <button class="btn-pdf" id="download-pdf">Download PDF</button>
     <header>
       <h1>Denys Tymofiienko</h1>
-      <p class="subtitle">Kyiv, Ukraine | Jira Administrator | Atlassian Consultant | System & Process Automation Specialist</p>
+<p>Kyiv, Ukraine</p>
+      <p class="subtitle">Jira Administrator | Atlassian Consultant | System & Process Automation Specialist</p>
     </header>
     <section>
       <h2>Project</h2>
