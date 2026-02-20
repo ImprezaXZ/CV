@@ -22,7 +22,6 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     body { font-family: 'Montserrat', sans-serif; font-size: var(--base-font); color: var(--text-primary); background: var(--bg-alt); line-height: 1.3; padding: 10px; }
     #resume { max-width: 800px; margin: auto; background: var(--bg); padding: 10px; border-radius: 4px; }
-    .btn-pdf { margin-bottom: 12px; background: var(--accent); color: #fff; border: none; padding: 6px 12px; font-size: 0.75rem; border-radius: 3px; cursor: pointer; }
     header { text-align: center; margin-bottom: 12px; }
     header h1 { font-weight: 700; font-size: 1.6rem; color: var(--accent); }
     header p.subtitle { font-weight: 300; color: var(--text-secondary); font-size: 0.8rem; margin-top: 4px; }
@@ -43,16 +42,15 @@
     .work-grid-content { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
     @media (max-width: 600px) { header h1 { font-size:1.4rem; } .two-col, .work-grid-content { grid-template-columns:1fr; } }
   </style>
-
 </head>
 <body>
   <div id="resume">
     <header>
       <h1>Denys Tymofiienko</h1>
-
-<p>Kyiv, Ukraine</p>
-      <p class="subtitle">Atlassian Enginner | Jira Administrator | System & Process Automation Specialist | Operations Manager</p>
+      <p>Kyiv, Ukraine</p>
+      <p class="subtitle">Senior Atlassian Engineer | Application Administrator | System & Process Automation Specialist</p>
     </header>
+    
     <section>
       <h2>Project</h2>
       <ol>
@@ -61,26 +59,22 @@
         <li><a href="https://mrtrash.co.uk">Business card website</a> [WordPress, PHP, JavaScript, CSS3, HTML]</li>
       </ol>
     </section>
+
     <section>
       <h2>Why me?</h2>
-      <p>Experienced Engineer with 3+ years in the Atlassian ecosystem and IT operations. I specialize in automating routine tasks, integrating systems like Slack, Git, and HR tools, and helping businesses scale efficiently through structured process setup. Built Jira Service Desks for teams of 600+ and automated onboarding/offboarding for cross-functional departments. Led business process building from chaos to seamless process. My main mission is build bullet-proof processes and tools, for business and teams, to cure their "pain". Using latest best-practices and tools, including AI. Looking for a role where I can drive productivity and system reliability as an in-house Ops Manager or Atlassian Engineer.
-</p>
-<h2 style="margin-top:5px;"> Atlassian Expertise</h2>
-<ul>
-<li>Jira Software / Jira Service Management: configuration, customization,
-automation, assets</li>
-<li>Confluence: space structuring, knowledge base creation</li>
-<li>Scripting & Automation: ScriptRunner, Automation rules, Zapier</li>
-<li>Integrations: Slack, Git, PeopleForce, EasyBI, HRMS tools, HiBob</li>
-<li>Service Desks: creation from scratch for SysAdmin, HR, Legal, Finance</li>
-<li>Reporting: custom dashboards, EasyBI reports, metrics for SLA and team load</li>
-<li>User/Permission management, Access controls</li>
-<li>API-based process automation, Rest API, ScriptRunner</li>
-<li>Admin for 40+ active projects in Jira</li>
-<li>Avaibility to work with any custom/marketplace plugin</li>
-<li>Assets: buidling from scratch, automations via asset objects</li>
-</ul>
+      <p>Senior Atlassian Engineer and System Administrator with deep expertise in optimizing IT operations and Enterprise toolchains. Proven track record of managing large-scale migrations (Server/DC to Cloud), designing complex automation architectures, and maintaining robust on-premise infrastructure. Specialized in integrating systems (Slack Enterprise Grid, Okta, HRMS) and writing custom scripts (Python, Bash, ScriptRunner) to eliminate operational bottlenecks. Adept at driving ROI through systemic workflow standardization and ensuring secure, high-availability environments for organizations scaling up to the enterprise level.</p>
+      
+      <h2 style="margin-top:5px;">Atlassian & Enterprise Expertise</h2>
+      <ul>
+        <li><strong>Migrations & Cloud:</strong> Proficiency with JCMA and CCMA. Expert in mapping custom fields, issue types, and complex workflows from Server/Data Center to Cloud without data loss.</li>
+        <li><strong>Administration & Architecture:</strong> Deep knowledge of Jira Software, JSM, Confluence, Bitbucket, and Fisheye/Crucible on application and database (Deep SQL) levels.</li>
+        <li><strong>Integrations & SSO:</strong> Slack Enterprise Grid migrations (Corporate Export, JSON/CSV handling), configuring Okta, Azure AD, and Google Workspace with Atlassian Access. Connecting Jira/Bitbucket/Confluence webhooks.</li>
+        <li><strong>Scripting & Automation:</strong> Python, Bash, Groovy (ScriptRunner), Automation rules, n8n, Zapier. Auditing 3rd-party marketplace apps (ScriptRunner, Tempo).</li>
+        <li><strong>Service Management:</strong> Building JSM from scratch, designing SLAs, asset management, and complex workflow automation for HR, IT, Legal, and Finance.</li>
+        <li><strong>Governance & Access:</strong> Enterprise-level user/permission management, security audits, and compliance controls.</li>
+      </ul>
     </section>
+
     <section>
       <h2>Tech Skills</h2>
       <div class="two-col">
@@ -89,178 +83,203 @@ automation, assets</li>
           <ul>
             <li>Windows (Client &amp; Server 2016/2019; AD, DC, WDS)</li>
             <li>macOS (MDM via Apple Business Manager; admin level)</li>
-            <li>Linux/Unix (Debian, Ubuntu, Fedora, antiX; headless &amp; GUI)</li>
+            <li>Linux/Unix (Debian, Ubuntu, Fedora; strong command-line troubleshooting)</li>
           </ul>
           <h3>Networking &amp; Infrastructure</h3>
           <ul>
-            <li>Protocols &amp; Services: DHCP, DNS, VPN, TLS/SSL, SSH, TCP/IP, LAN/WLAN</li>
-            <li>Servers: LAMP stack, mail domains (Google Admin), domain &amp; DNS records (NameCheap, DigitalOcean)</li>
-            <li>High availability: UPS-backed hardware, blackout-resilient networking</li>
+            <li>Protocols &amp; Services: DHCP, DNS, VPN, TLS/SSL, SSH, TCP/IP</li>
+            <li>Servers: LAMP stack, mail domains (Google Admin), domain &amp; DNS management</li>
+            <li>High availability: Performance monitoring, DevOps practices, load balancers</li>
           </ul>
         </div>
         <div>
-          <h3>Virtualization &amp; Automation &amp; Languages</h3>
+          <h3>Virtualization, Automation &amp; DB</h3>
           <ul>
-            <li>Hyper-V, WSL, Docker</li>
-            <li>Ansible (self-taught), Zapier, n8n</li>
-            <li>Shell/Bash &amp; Python scripting; PHP (WordPress freelance), JSON, Rest API, JavaScript</li>
+            <li>Hyper-V, WSL, Docker, Ansible</li>
+            <li>Databases: Deep SQL knowledge, managing Jira/Confluence DBs</li>
+            <li>Scripting: Bash, Python, PHP, JavaScript, JSON, REST APIs</li>
           </ul>
           <h3>Hardware &amp; Tools</h3>
           <ul>
-            <li>Machine maintenance &amp; assembly (600+ endpoints)</li>
-            <li>ACS systems (FortiNet, U-Prox), workspace setup</li>
-            <li>Version control &amp; CI: GitHub (Jira integration, branching)</li>
-            <li>Embedded &amp; IoT: Arduino/C++ firmware development</li>
+            <li>Machine maintenance &amp; endpoint management (600+ devices)</li>
+            <li>ACS systems (FortiNet, U-Prox)</li>
+            <li>Version control &amp; CI: GitHub, Bitbucket/Git integration</li>
           </ul>
         </div>
       </div>
     </section>
+
     <section class="work-timeline">
       <h2>Work Experience</h2>
+
+      <div class="timeline-entry">
+        <h3>SoftServe — Senior Atlassian Application Administrator (Aug 2025–Present)</h3>
+        <div class="work-grid-content">
+          <div>
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li>Maintained and supported large-scale on-premises Atlassian infrastructure (Jira, Confluence, Bitbucket, Fisheye/Crucible) on application and DB servers.</li>
+              <li>Led Server/Data Center to Cloud migrations using JCMA and CCMA, ensuring accurate mapping of custom fields and complex workflows.</li>
+              <li>Executed multiple workspace migrations into a single Slack Enterprise Grid org, handling JSON/CSV data via Corporate Export tools.</li>
+              <li>Handled advanced configurations: Okta/Azure AD SSO with Atlassian Access, application performance monitoring, and webhook integrations.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Achievements</h4>
+            <ul>
+              <li>Successfully audited and migrated business-critical 3rd-party apps (ScriptRunner, Tempo) with zero downtime and no loss of historical data.</li>
+              <li>Resolved complex database and integration issues utilizing deep SQL knowledge and advanced Bash/Python scripting.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <h3>Pivdennyi Bank — Lead Programmer / Atlassian Engineer (Aug 2025–Present)</h3>
+        <div class="work-grid-content">
+          <div>
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li>Analyzed existing automations and integrated external vendor code into the production environment for Jira Software, Confluence, and JSM.</li>
+              <li>Developed advanced mechanisms for cyclical task generation and automated issue handling.</li>
+              <li>Acted as the technical lead for internal Atlassian architecture, ensuring seamless process flow for cross-functional teams.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Achievements</h4>
+            <ul>
+              <li>Architected and deployed sequential Sub-Task execution flows (enforcing dependency rules upon status transitions), significantly reducing manual operational overhead.</li>
+              <li>Standardized internal coding practices for Atlassian custom developments, improving overall system maintainability.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <div class="timeline-entry">
         <h3>Nova Global — Atlassian Expert, part-time (Jan 2025–July 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
             <ul>
-              <li>Collaborated with teams to implement and optimize workflow efficiency</li>
-              <li>Implementing new internal workflows to significantly improving team productivity </li>
-              <li>Implemented from scratch all-new workflow using Jira Advanced Planner to sychronize all departmanest while working under one sprint</li>
+              <li>Collaborated with teams to implement and optimize workflow efficiency across the organization.</li>
+              <li>Implemented from scratch an all-new planning workflow using Jira Advanced Roadmaps to synchronize all departments under a unified sprint schedule.</li>
             </ul>
           </div>
           <div>
             <h4>Achievements</h4>
             <ul>
-              <li>Streamlined processes leading to noticeable productivity enhancements across multiple departments</li>
-              <li>Created new type of priority related to RICE methodology</li>
+              <li>Streamlined processes leading to a 25% reduction in planning overhead and noticeable productivity enhancements.</li>
+              <li>Engineered a custom priority matrix workflow aligned with the RICE scoring methodology.</li>
             </ul>
           </div>
         </div>
       </div>
+
       <div class="timeline-entry">
         <h3>NDA — Automation Engineer, part-time (Feb 2025–Aug 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
             <ul>
-              <li>Bulding AI-agents with n8n.</li>
-              <li>Integration with various DB and systems, including writing prompts, creating vector databases for AI to find the answer</li>
-              <li>Ai-Agents was mainly build for reducing hands-on work from support team, reduce costs and make support avaible 24/7</li>
+              <li>Built and trained AI-agents utilizing n8n pipelines and custom Python scripting.</li>
+              <li>Integrated various databases and systems, including writing prompt logic and creating vector databases for AI knowledge retrieval.</li>
             </ul>
           </div>
           <div>
             <h4>Achievements</h4>
             <ul>
-              <li>Finished full AI-agent via support role under 2 months</li>
-              <li>Successfully integrated AI-agent to IT lives, thats helps them via hardware documentation</li>
+              <li>Successfully deployed a fully autonomous AI-agent for L1 IT Support within 2 months.</li>
+              <li>Reduced hands-on manual work for the support team and enabled 24/7 hardware documentation assistance.</li>
             </ul>
           </div>
         </div>
       </div>
+
       <div class="timeline-entry">
         <h3>Softgile — Atlassian Expert, full-time (Jan 2025–June 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
             <ul>
-              <li>Collaborated with teams to implement and optimize Atlassian products, enhancing workflow efficiency</li>
-              <li>Led rebuilding of internal workflows, significantly improving team productivity and tool integration</li>
-              <li>Delivered tailored Atlassian solutions for major clients including Monobank, PrivatBank, and Goodwine</li>
+              <li>Delivered tailored, scalable Atlassian architecture solutions for Enterprise-level clients including Monobank, PrivatBank, and Goodwine.</li>
+              <li>Led the rebuilding of internal workflows, significantly improving cross-tool integration and deployment strategies.</li>
             </ul>
           </div>
           <div>
             <h4>Achievements</h4>
             <ul>
-              <li>Streamlined processes leading to noticeable productivity enhancements across multiple departments</li>
-              <li>Successfully integrated advanced automation strategies and toolsets (ScriptRunner, Business Process Automation)</li>
+              <li>Successfully integrated advanced automation strategies via ScriptRunner and Business Process Automation tools.</li>
+              <li>Streamlined client processes, resulting in measurable SLA improvements and robust system governance.</li>
             </ul>
           </div>
         </div>
       </div>
+
       <div class="timeline-entry">
         <h3>MNSTR.TECH — System Administrator/Atlassian Expert, full-time (Nov 2024–Jan 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
             <ul>
-              <li>Set up and administered Jira Service Management projects for SysAdmin, Legal, and Finance departments (10+ projects)</li>
-              <li>Built dashboards in EasyBI to track key metrics</li>
-              <li>Customized workflows with ScriptRunner & Automation rules, integrated external systems (Slack, HR tools, Git)</li>
-              <li>Controlled user permissions, service access, hardware/software procurement flows</li>
+              <li>Set up and administered over 10 Jira Service Management projects for SysAdmin, Legal, and Finance departments.</li>
+              <li>Built comprehensive reporting dashboards in EasyBI to track key performance metrics and SLAs.</li>
+              <li>Governed user permissions, Okta integrations, and hardware/software procurement flows.</li>
             </ul>
           </div>
           <div>
             <h4>Achievements</h4>
             <ul>
-              <li>Reduced manual workload for HR &amp; SysAdmin teams by 30% via automated workflows</li>
-              <li>Designed and implemented full Jira SD from scratch for 600+ employees</li>
-              <li>Successfully onboarded 3 new departments into Atlassian ecosystem in under 2 months</li>
+              <li>Reduced manual workload for HR &amp; SysAdmin teams by 30% via ScriptRunner and Automation rules.</li>
+              <li>Successfully onboarded 3 new departments into the Atlassian ecosystem in under 2 months.</li>
             </ul>
           </div>
         </div>
       </div>
+
       <div class="timeline-entry">
         <h3>NetGame — System Administrator, full-time (Mar 2024–Jan 2025)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
             <ul>
-              <li>Provide technical user support and HelpDesk engineering</li>
-              <li>Maintain 600+ endpoints across macOS, Ubuntu, Mint, Fedora and Windows</li>
-              <li>Manage network infrastructure: workspace setup, VPN (office &amp; remote), and ACS systems (FortiNet, U-Prox)</li>
-              <li>Administer Active Directory on Windows Server for Wi-Fi, Jira and VPN access provisioning</li>
-              <li>Configure and maintain Jira across 10 projects, including Service Desk setup for SysAdmin &amp; Admin departments</li>
-              <li>Operate Google Workspace, Slack &amp; email domains via Google Admin Panel</li>
-              <li>Oversee hardware/software procurement workflows and access controls</li>
+              <li>Maintained 600+ endpoints across macOS, Linux, and Windows; provided HelpDesk engineering.</li>
+              <li>Managed network infrastructure, VPN, ACS systems (FortiNet, U-Prox), and Active Directory.</li>
+              <li>Configured and maintained Jira across 10 projects, including primary JSM setup.</li>
             </ul>
           </div>
           <div>
             <h4>Achievements</h4>
             <ul>
-              <li>Designed and launched a Jira Service Desk from scratch, serving 600+ employees</li>
-              <li>Built battery-backed charging stations to ensure network uptime during blackouts</li>
-              <li>Integrated Jira with PeopleForce to automate onboarding/offboarding processes</li>
+              <li>Designed and launched a Jira Service Desk from scratch to serve 600+ employees globally.</li>
+              <li>Integrated Jira with PeopleForce via API to fully automate HR onboarding/offboarding processes.</li>
+              <li>Built battery-backed charging infrastructure to ensure zero network downtime during blackouts.</li>
             </ul>
           </div>
         </div>
       </div>
+
       <div class="timeline-entry">
         <h3>Self-employed — Atlassian Expert (June 2023–Feb 2024)</h3>
         <div class="work-grid-content">
           <div>
             <h4>Key Responsibilities</h4>
             <ul>
-              <li>Working with every Atlassian instance (Cloud, Server, Data-Center)</li>
-              <li>Led building of workflows, significantly improving team productivity and tool integration</li>
-              <li>Developing from scratch JSM portals for IT, build workflows for IT, HR, Legal, Security with the mission: synchronize their work together, reduce hands-on work and let automations do their job</li>
+              <li>Administered Atlassian instances across Cloud, Server, and Data Center environments for various clients.</li>
+              <li>Developed JSM portals and complex workflows for IT, HR, Legal, and Security departments.</li>
             </ul>
           </div>
           <div>
             <h4>Achievements</h4>
             <ul>
-              <li>Streamlined processes leading to noticeable productivity enhancements across multiple teams, departments</li>
-              <li>Successfully integrated advanced automation strategies and toolsets (ScriptRunner, Business Process Automation)</li>
+              <li>Synchronized inter-departmental operations, drastically reducing manual ticket triaging.</li>
+              <li>Integrated enterprise toolsets to create unified, automated business processes.</li>
             </ul>
           </div>
         </div>
       </div>
-      <div class="timeline-entry">
-        <h3>Funkeys — Service Manager &amp; SysAdmin, full-time (Sep 2020–May 2023)</h3>
-        <div class="work-grid-content">
-          <div>
-            <h4>Key Responsibilities</h4>
-            <ul>
-              <li>Technical customer support</li>
-              <li>Service customer support</li>
-              <li>HelpDesk engineer</li>
-              <li>Providing technical support for up to 5 computers in office</li>
-              <li>Setting up workspaces and administrating network connection in office</li>
-            </ul>
-          </div>
-          <div></div>
-        </div>
-      </div>
+
     </section>
+
     <section>
       <h2>Education</h2>
       <ul>
@@ -268,31 +287,21 @@ automation, assets</li>
         <li><strong>Kharkiv Radio Engineering College</strong> — Micro and Radio Electronics, September 2017–June 2021 | Kharkiv, Ukraine</li>
       </ul>
     </section>
+
     <section>
- <h2>Softskills</h2>
-<p style="text-align:center; margin-top:8px; font-weight:700; color:var(--text-primary);">Communication | Curiosity | Resilience | Fast learner | Proactive</p>
+      <h2>Soft Skills</h2>
+      <p style="text-align:center; margin-top:8px; font-weight:700; color:var(--text-primary);">
+        Communication | Curiosity | Resilience | Fast learner | Proactive | Mentorship
+      </p>
+      
       <h2>Contacts</h2>
       <ul>
         <li>Email: <a href="mailto:imprezaxluv@gmail.com">imprezaxluv@gmail.com</a></li>
         <li>Telegram: <a href="https://t.me/nohesitage">@nohesitage</a></li>
         <li>GitHub: <a href="https://github.com/ImprezaXZ">ImprezaXZ</a></li>
-<li>LinkedIn: <a href="https://linkedin.com/in/denystymofiienko/">Denys Tymofiienko</a></li>
+        <li>LinkedIn: <a href="https://linkedin.com/in/denystymofiienko/">Denys Tymofiienko</a></li>
       </ul>
     </section>
   </div>
-  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
-  <script defer>
-    document.addEventListener('DOMContentLoaded', () => {
-      const resume = document.getElementById('resume');
-      document.title = 'Denys Tymofiienko — Resume';
-      // Generate PDF optimized
-      html2pdf().set({
-        margin: 0.1,
-        filename: 'Denys Tymoienko_ Jira Administrator | Atlassian Consultant | System & Process Automation Specialist.pdf',
-        html2canvas: { scale: 2 },
-        pagebreak: { mode: ['avoid-all', 'css'] }
-      }).from(resume).save();
-    });
-  </script>
 </body>
 </html>
