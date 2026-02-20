@@ -76,4 +76,332 @@
       color: var(--text-muted);
     }
     .contact-info a {
-      color: var(--text
+      color: var(--text-muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s ease;
+    }
+    .contact-info a:hover { color: var(--purple-primary); }
+
+    /* Section Styles */
+    section { margin-bottom: 25px; page-break-inside: avoid; }
+    section h2 { 
+      font-weight: 700; 
+      font-size: 1.2rem; 
+      color: var(--text-main); 
+      margin-bottom: 12px; 
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    section h2::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-color: var(--purple-primary);
+      border-radius: 3px;
+    }
+
+    p { margin-bottom: 10px; color: var(--text-muted); }
+    
+    ul, ol { padding-left: 20px; margin-bottom: 10px; }
+    li { margin-bottom: 6px; color: var(--text-muted); }
+    li strong { color: var(--text-main); font-weight: 600; }
+    
+    a { color: var(--purple-primary); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--purple-dark); text-decoration: underline; }
+
+    /* Grid Layouts */
+    .grid-2-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    
+    /* Certification Tags */
+    .cert-container { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 15px; }
+    .cert-tag {
+      background: var(--purple-light);
+      color: var(--purple-dark);
+      padding: 6px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border: 1px solid var(--purple-border);
+    }
+
+    /* Timeline Styles */
+    .work-timeline { position: relative; padding-left: 15px; }
+    .work-timeline::before { 
+      content: ''; 
+      position: absolute; 
+      left: 0; top: 8px; bottom: 0; 
+      width: 2px; 
+      background: var(--purple-border); 
+    }
+    .timeline-entry { position: relative; margin-bottom: 25px; padding-left: 20px; }
+    .timeline-entry::before { 
+      content: ''; 
+      position: absolute; 
+      left: -20px; 
+      top: 6px; 
+      width: 10px; height: 10px; 
+      background: var(--bg-card); 
+      border: 2px solid var(--purple-primary); 
+      border-radius: 50%; 
+    }
+    .timeline-header { margin-bottom: 8px; }
+    .timeline-header h3 { font-size: 1.05rem; color: var(--text-main); font-weight: 700; }
+    .timeline-header span.date { font-size: 0.85rem; color: var(--text-light); font-weight: 400; display: block; margin-top: 2px;}
+    
+    .role-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px; }
+    h4 { font-size: 0.85rem; color: var(--purple-dark); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 8px; }
+
+    /* Soft Skills */
+    .soft-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .soft-skill-item {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      background: var(--bg-body);
+      padding: 4px 10px;
+      border-radius: 4px;
+      border: 1px solid #E2E8F0;
+    }
+
+    /* Print Optimization */
+    @media print {
+      body { background: white; padding: 0; }
+      #resume { box-shadow: none; padding: 0; max-width: 100%; }
+      .cert-tag { border: 1px solid #ccc; color: #000; background: #f9f9f9; }
+    }
+    @media (max-width: 600px) {
+      .grid-2-col, .role-grid { grid-template-columns: 1fr; gap: 10px; }
+      #resume { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div id="resume">
+    <header>
+      <h1>Denys <span>Tymofiienko</span></h1>
+      <p class="subtitle">Senior Atlassian Engineer | Application Administrator | System & Process Automation Specialist</p>
+      <div class="contact-info">
+        <span>📍 Kyiv, Ukraine</span>
+        <a href="mailto:imprezaxluv@gmail.com">✉️ imprezaxluv@gmail.com</a>
+        <a href="https://t.me/nohesitage">📱 @nohesitage</a>
+        <a href="https://github.com/ImprezaXZ">💻 github.com/ImprezaXZ</a>
+        <a href="https://linkedin.com/in/denystymofiienko/">🔗 linkedin.com/in/denystymofiienko</a>
+      </div>
+    </header>
+    
+    <section>
+      <h2>Professional Summary</h2>
+      <p>Senior Atlassian Engineer and System Administrator with deep expertise in optimizing Enterprise IT operations and handling complex, large-scale systems (up to 2,000+ users). Proven track record of architecting consolidated migrations (multiple DC to single Cloud), maintaining high-availability on-premise infrastructure, and integrating robust ecosystems (Azure Assets, Slack Enterprise Grid). Specialized in <strong>FinOps</strong> (optimizing license costs), deep <strong>JVM/Database troubleshooting</strong>, and rigorous <strong>Security Audits</strong>. Adept at driving ROI through systemic workflow standardization and custom automation (Python, Bash, ScriptRunner).</p>
+    </section>
+
+    <section>
+      <h2>Licenses & Certifications</h2>
+      <div class="cert-container">
+        <span class="cert-tag">Teamwork Foundations Technical Delivery Accreditation (Jan 2026)</span>
+        <span class="cert-tag">Bitbucket Pipelines configuration for Atlassian Partners (May 2025)</span>
+        <span class="cert-tag">Software Development Technical Delivery Accreditation (May 2025)</span>
+        <span class="cert-tag">Service Management Technical Delivery Accreditation (May 2025)</span>
+        <span class="cert-tag">Atlassian Rovo Fundamentals</span>
+        <span class="cert-tag">Atlassian Forge Fundamentals</span>
+      </div>
+    </section>
+
+    <section>
+      <h2>Core Competencies</h2>
+      <div class="grid-2-col">
+        <div>
+          <h4>Atlassian & Enterprise Architecture</h4>
+          <ul>
+            <li><strong>Migrations:</strong> Consolidated multi-DC to single Cloud migrations. JCMA, CCMA. Seamless transfer of Zephyr, Xray, and ScriptRunner.</li>
+            <li><strong>Performance & HA:</strong> Managing large-scale instances (2k+ Cloud, 1.5k+ DC). JVM logs, DB optimization.</li>
+            <li><strong>FinOps & Security:</strong> Auditing marketplace apps for cost optimization, RBAC, Data compliance, Atlassian Access SSO.</li>
+            <li><strong>Integrations:</strong> Azure Assets, Slack Enterprise Grid (JSON/CSV Export), JSM, Webhooks, Git, PeopleForce.</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Infrastructure & Scripting</h4>
+          <ul>
+            <li><strong>Platforms & DB:</strong> Windows Server (AD, DC), Linux/Unix, macOS. Deep SQL knowledge.</li>
+            <li><strong>Automation:</strong> Python, Bash, Groovy (ScriptRunner), n8n, Zapier.</li>
+            <li><strong>Networking:</strong> DHCP, DNS, VPN, TCP/IP, Load balancing, FortiNet, U-Prox.</li>
+            <li><strong>Virtualization:</strong> Docker, Ansible, Hyper-V, WSL.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="work-timeline">
+      <h2>Professional Experience</h2>
+
+      <div class="timeline-entry">
+        <div class="timeline-header">
+          <h3>SoftServe — Senior Atlassian Application Administrator</h3>
+          <span class="date">Aug 2025 – Present | Full-time</span>
+        </div>
+        <div class="role-grid">
+          <div>
+            <h4>Responsibilities</h4>
+            <ul>
+              <li>Administered large-scale environments: a <strong>Cloud instance for 2,000+ users</strong> and a <strong>Data Center (DC) instance for 1,500+ users</strong>, encompassing the full core Atlassian stack.</li>
+              <li>Executed complex consolidated migrations from <strong>multiple DC instances into a single Cloud instance</strong>, successfully migrating critical apps including Zephyr, Xray, and ScriptRunner.</li>
+              <li>Configured advanced Asset Management, integrating both Cloud and DC instances with <strong>Azure Assets</strong> and Jira Service Management (JSM).</li>
+              <li>Analyzed JVM performance logs and database bottlenecks to ensure High Availability (HA) and system stability.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Achievements</h4>
+            <ul>
+              <li>Initiated <strong>FinOps practices</strong>: audited 3rd-party marketplace apps, optimizing plugin usage and significantly reducing enterprise licensing costs.</li>
+              <li>Successfully executed workspace migrations into a single Slack Enterprise Grid org, handling massive JSON/CSV data exports.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-header">
+          <h3>Pivdennyi Bank — Lead Programmer / Atlassian Engineer</h3>
+          <span class="date">Aug 2025 – Present | Full-time</span>
+        </div>
+        <div class="role-grid">
+          <div>
+            <h4>Responsibilities</h4>
+            <ul>
+              <li>Maintained and scaled an on-premise <strong>Data Center instance serving 1,000+ users</strong>.</li>
+              <li>Analyzed existing automations and integrated external vendor code into the production environment for Jira Software, Confluence, and JSM.</li>
+              <li>Developed advanced mechanisms for cyclical task generation and complex issue handling.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Achievements</h4>
+            <ul>
+              <li>Architected sequential Sub-Task execution flows with strict dependency rules upon status transitions, drastically reducing manual operational overhead.</li>
+              <li>Standardized internal coding practices for custom Atlassian developments.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-header">
+          <h3>Nova Global — Atlassian Expert</h3>
+          <span class="date">Jan 2025 – July 2025 | Part-time</span>
+        </div>
+        <div class="role-grid">
+          <div>
+            <h4>Responsibilities</h4>
+            <ul>
+              <li>Collaborated with global teams to optimize cross-departmental workflow efficiency.</li>
+              <li>Designed custom priority matrix workflows aligned with the RICE scoring methodology.</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Achievements</h4>
+            <ul>
+              <li><strong>Successfully implemented Jira Advanced Planner</strong> (Advanced Roadmaps) from scratch, establishing a unified ecosystem that synchronized all departments under a single sprint structure.</li>
+              <li>Streamlined planning processes, leading to a 25% reduction in managerial overhead.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-header">
+          <h3>NDA — Automation Engineer</h3>
+          <span class="date">Feb 2025 – Aug 2025 | Part-time</span>
+        </div>
+        <ul>
+          <li>Built and trained AI-agents utilizing n8n pipelines and custom Python scripting, integrating vector databases for AI knowledge retrieval.</li>
+          <li>Deployed a fully autonomous L1 IT Support AI-agent within 2 months, reducing manual workload and enabling 24/7 hardware documentation assistance.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-header">
+          <h3>Softgile — Atlassian Expert</h3>
+          <span class="date">Jan 2025 – June 2025 | Full-time</span>
+        </div>
+        <ul>
+          <li>Delivered scalable Atlassian architecture solutions for Enterprise clients (Monobank, PrivatBank, Goodwine).</li>
+          <li>Integrated advanced automation strategies via ScriptRunner and BPA tools, resulting in measurable SLA improvements.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-header">
+          <h3>MNSTR.TECH — System Administrator / Atlassian Expert</h3>
+          <span class="date">Nov 2024 – Jan 2025 | Full-time</span>
+        </div>
+        <ul>
+          <li>Administered 10+ JSM projects for SysAdmin, Legal, and Finance; built reporting dashboards in EasyBI.</li>
+          <li>Reduced manual workload by 30% via ScriptRunner and onboarded 3 new departments in under 2 months.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-entry">
+        <div class="timeline-header">
+          <h3>NetGame — System Administrator</h3>
+          <span class="date">Mar 2024 – Jan 2025 | Full-time</span>
+        </div>
+        <ul>
+          <li>Maintained 600+ endpoints globally; managed Active Directory, VPN, and ACS systems (FortiNet, U-Prox).</li>
+          <li>Designed and launched a primary Jira Service Desk from scratch; integrated with PeopleForce via API to fully automate HR onboarding/offboarding.</li>
+        </ul>
+      </div>
+      
+      <div class="timeline-entry">
+        <div class="timeline-header">
+          <h3>Self-employed — Atlassian Expert</h3>
+          <span class="date">June 2023 – Feb 2024</span>
+        </div>
+        <ul>
+          <li>Administered Atlassian instances across Cloud, Server, and DC; developed JSM portals to synchronize inter-departmental operations (IT, HR, Legal).</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education & Projects</h2>
+      <div class="grid-2-col">
+        <div>
+          <h4>Education</h4>
+          <ul>
+            <li><strong>Kharkiv National Technical University of Agriculture</strong><br>Computer Engineering (2021–2024)</li>
+            <li><strong>Kharkiv Radio Engineering College</strong><br>Micro and Radio Electronics (2017–2021)</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Personal Projects</h4>
+          <ul>
+            <li><a href="https://github.com/ImprezaXZ/ChatGPTBotGIT">Telegram Chat-GPT bot</a> [Python3]</li>
+            <li><a href="https://nyami-yami.com.ua">E-commerce site</a> [WP, PHP, JS, CSS3]</li>
+            <li><a href="https://mrtrash.co.uk">Business card website</a> [WP, PHP, JS]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Soft Skills</h2>
+      <div class="soft-skills">
+        <span class="soft-skill-item">Communication</span>
+        <span class="soft-skill-item">Curiosity</span>
+        <span class="soft-skill-item">Resilience</span>
+        <span class="soft-skill-item">Fast learner</span>
+        <span class="soft-skill-item">Proactive</span>
+        <span class="soft-skill-item">Mentorship</span>
+        <span class="soft-skill-item">Strategic Thinking</span>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
